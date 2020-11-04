@@ -12,7 +12,13 @@ class _HomeState extends State<Home> {
       body: SafeArea(
         child: Column(
           children: [
-            Text("hello"),
+            FlatButton.icon(
+              onPressed: (){
+                Navigator.pushNamed(context, '/location');
+              }, 
+              icon: Icon(Icons.edit_location),
+              label: Text("Edit Location"),
+            ),
           ],
         ),
       ),
